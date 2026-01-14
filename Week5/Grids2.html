@@ -1,0 +1,64 @@
+<style>
+    .grid-container {
+        display:grid;
+
+        grid-template:
+            "header header" 70px
+            "aside main"    530px
+            "footer footer" 70px
+            / 20% 80%;
+
+        gap: 10px;
+        padding:10px;
+        background-color:#e0f7f7;
+        height:100vh;
+        box-sizing: border-box;
+    }
+
+    header {
+        grid-area: header;
+        background-color: rgb(1, 103, 255);
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        font-size: 24px;
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: rgb(3, 233, 149);
+        color: white;
+        text-align: center;
+        line-height: 530px;
+        font-size: 24px;
+    }
+
+    content {
+        grid-area: main;
+        background-color: rgb(4, 181, 201);
+        color: white;
+        text-align: center;
+        line-height: 530px;
+        font-size: 24px;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: rgb(20, 1, 164);
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        font-size: 24px;
+    }
+
+</style>
+
+<body>
+    <div class="grid-container">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <content>Main Content</content>
+        <footer>Footer</footer>
+    </div>
+    
+</body>

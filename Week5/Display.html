@@ -1,0 +1,77 @@
+<style>
+    
+    .block-excample div {
+        display: block;
+        padding: 10px;
+        margin-bottom: 5px;
+        background: #c8e6ff;
+    }
+
+    .inline-example span {
+        display: inline;
+        padding: 5px;
+        background: #ffc8c8;
+        margin-right: 5px;
+    }
+
+    .inline-block-excample div {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        background: #d2ffd2;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 4opx;
+        border: 1px solid #4caf50;
+    }
+
+    .box {
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #a0d8ff;
+        border: 2px solid #0077aa;
+        font-size: 20px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+</style>
+
+<body>
+    <h1>display:block;</h1>
+    <div class="block-excample">
+        <div>Block 1</div>
+        <div>Block 2</div>
+    </div>
+
+    <h1>display:inline;</h1>
+    <div class="inline-example">
+        <span>Inline1</span>
+        <span>Inline2 22</span>
+        <span>Inline3</span>
+    </div>
+
+    <h1>display:inline-block;</h1>
+    <div class="inline-block-excample">
+        <div>Inline-Block 1</div>
+        <div>Inline-Block 2</div>
+        <div>Inline-Block 3</div>
+    </div>
+
+    <h2>แสดงผลปกติ</h2>
+    <div class="box">Box 1 ปกติ</div>
+
+    <h2>display:none; -> หายไปจากหน้าเว็บ</h2>
+    <div class="box none">Box2 (display:none หายไป)</div>
+    <div class="box">Box3 จะชิดขึ้นมาทันทีเพราะ Box2 หายไป</div>
+
+    <h2>visibility:hidden; -> ซ่อน แต่ยังคงพื้นที่</h2>
+    <div class="box hidden">Box4 (visibility:hidden ซ่อน แต่ยังคงขนาด)</div>
+    <div class="box">Box5 จะไม่ขยับขึ้น เพราะ Box4 ยังคงพื้นที่อยู่</div>
+</body>
