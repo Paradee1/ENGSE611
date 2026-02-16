@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์การวนลูป</pre>
+    <button onclick="runCode()">Run Code</button>
+    <script>
+        function runCode() {
+            const output = [];
+            let maxNumber = 20;
+            let OddEven = "";
+
+            for (let i = 0; i <= maxNumber; i++) {
+                if (i % 2 == 0) {
+                    OddEven = "คู่";
+                }
+                else {
+                    OddEven = "คี่";
+                }
+
+                output.push(i + " " + OddEven);
+                console.log(i + " " + OddEven);
+            
+
+            }
+            
+            output.push("------------------------");
+
+            for(let i = 0; i <= maxNumber; i += 2) {
+                    output.push(`รอบที่ ${i}`);
+                    console.log(`รอบที่ ${i}`);
+            }
+
+            output.push("------------------------");
+
+            for(let i = maxNumber; i >= 0; i--) {
+                output.push(`รอบที่ ${i}`);
+                console.log(`รอบที่ ${i}`);
+            }
+
+        document.getElementById("output").textContent = output.join("\n");
+        }
+        
+    </script>
+</body>
+</html>

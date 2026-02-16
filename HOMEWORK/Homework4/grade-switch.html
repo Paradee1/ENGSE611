@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์การตรวจสอบเกรด</pre>
+    <button onclick="runCode()">Run Code</button>
+
+    <script>
+        function runCode() {
+            const output = [];
+            let grade = "";
+            let score = Math.floor(Math.random() * 100);
+
+            output.push("คะแนนที่สุ่มได้: " + score);
+            console.log("คะแนนที่สุ่มได้: " , score);
+
+            if (score >= 80) {
+                grade = "A";
+            }
+            else if (score >= 70) {
+                grade = "B";
+            }
+            else if (score >= 60) {
+                grade = "C";
+            }
+            else if (score >= 50) {
+                grade = "D";
+            }
+            else {
+                grade = "F";
+            }
+
+            output.push("เกรด: " + grade);
+            console.log("เกรด: " + grade);
+
+            if(score >= 50) {
+                output.push("ผลสอบ: ผ่าน");
+                console.log("ผลสอบ: ผ่าน");
+            } else {
+                output.push("ผลสอบ: ไม่ผ่าน");
+                console.log("ผลสอบ: ไม่ผ่าน");
+            }
+
+            switch(grade) {
+                case "A":
+                    output.push("คำอธิบาย: ยอดเยี่ยม!");
+                    console.log("คำอธิบาย: ยอดเยี่ยม!");
+                    break;
+                case "B":
+                    output.push("คำอธิบาย: ดีมาก รักษามาตรฐานไว้!");
+                    console.log("คำอธิบาย: ดีมาก รักษามาตรฐานไว้!");
+                    break;
+                case "C":
+                    output.push("คำอธิบาย: ผ่านเกณฑ์ระดับดี!");
+                    console.log("คำอธิบาย: ผ่านเกณฑ์ระดับดี!");
+                    break;
+                case "D":
+                    output.push("คำอธิบาย: พอใช้ แต่ควรพัฒนาเพิ่ม!");
+                    console.log("คำอธิบาย: พอใช้ แต่ควรพัฒนาเพิ่ม!");
+                    break
+                case "F":
+                    output.push("คำอธิบาย: ต้องลงทะเบียนเรียนใหม่!");
+                    console.log("คำอธิบาย: ต้องลงทะเบียนเรียนใหม่!");
+                    break;
+            }
+
+            document.getElementById("output").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>
